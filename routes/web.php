@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/tikect', 'HomeController@index')->name('home');
 
 //TEST-ROUTES 
 Route::get('contacto', 'TicketController@test')->name('contacto');

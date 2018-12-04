@@ -35,19 +35,31 @@ class HomeController extends Controller
         $oClient->connect();
         $aFolder = $oClient->getFolders();
         $oFolder = $oClient->getFolder('INBOX.name');
-        $aMessage = $oFolder->query()->new()->get()->paginate(10);
+        $aMessage = $oFolder->query()->new()->get();
 
-        $aMessage;
-        //$newMessage = Collection::make($aMessage);
+        // $msg = $oFolder->getMessage($uid = 8);
+        //$aMessage = Collection::make($aMessage);
 
-        //dd($newMessage);
-
+      //Esta linea borra los tikect nuevos 
+       // $msg->setFlag('deleted');
+        
+     //dd($msg);
+    // dd($aMessage);
         $name = Auth::user()->name;
 
         $user = Auth::user();
+        $contenedor = collect([]);
         
+            foreach ($aMessage as $oMessage) {
+                $nuevo['id'] = $oMessage->getUid();
+                $nuevo['asunto'] = $oMessage->getSubject();
+                $contenedor->push($nuevo);
+            }
+        
+        dd($contenedor->toJson());
         return view('home', compact('user', 'aMessage'));
-    }
+        // return response()->json($aMessage);
+    } 
 
 
 
