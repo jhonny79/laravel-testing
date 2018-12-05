@@ -46,7 +46,7 @@
 
         <nav>
           <div class="nav-wrapper black darken-4">
-          <a href="{{ route('home')}}" class="brand-logo"><strong>{{ config('app.name', 'Laravel') }}</strong></a>
+          <a href="{{ route('inicio')}}" class="brand-logo"><strong>{{ config('app.name', 'Laravel') }}</strong></a>
             
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     
@@ -67,6 +67,7 @@
                 @can('stats.index')
                 <li><a href="{{ route('stats.index') }}"><strong>Estadistica</strong> </a></li>
                 @endcan    --}}
+                <li><a>Tickets</a></li>
               <!-- Dropdown Trigger -->
               <li><a class="dropdown-trigger" href="" data-target="dropdown1"><i class="material-icons right">arrow_drop_down</i>{{ Auth::user()->name }}</a></li>
             </ul>
@@ -89,6 +90,7 @@
                 @can('stats.index')
                 <li><a href="{{ route('stats.index') }}"><strong>Estadistica</strong> </a></li>
                 @endcan    --}}
+                <li><a>Tickets</a></li>
   </ul>
     </header>
     @endguest

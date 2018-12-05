@@ -17,7 +17,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/', 'dashBoardController@inicio')->name('inicio');
+
+
+
 Route::get('/tikect', 'HomeController@index')->name('home');
 
 //TEST-ROUTES 
