@@ -13,14 +13,14 @@ const mix = require('laravel-mix');
 
 mix.js([
 	
-    'resources/js/materialize.min.js',
+	'resources/js/materialize.js',
+	'resources/js/extras.js',
 	'resources/js/app.js',
-	'resources/js/jquery.js',
 	], 'public/js/app.js')
    .styles([
-   	'resources/css/materialize.min.css',
+   	'resources/css/materialize.css',
    	'resources/css/app.css',
 	], 'public/css/app.css');
 
 
-	mix.copy('resources/fonts', 'public/fonts');
+	// mix.copy('resources/fonts', 'public/fonts');

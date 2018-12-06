@@ -15,5 +15,6 @@ class dashBoardController extends Controller
     public function inicio() {
         $user = Auth::user();
         return view('web.inicio', compact('user'));
+        
     }
 }

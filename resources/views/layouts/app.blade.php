@@ -11,7 +11,7 @@
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Scripts -->
     
-    <script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js') }}" defer></script>
+   
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
