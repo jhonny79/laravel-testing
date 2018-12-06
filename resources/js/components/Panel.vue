@@ -4,14 +4,14 @@
 			<div class="col s12 m12 l3">
 				<ul class="collapsible ">
 				    <li>
-				      <div class="collapsible-header"><i class="material-icons">email</i>Tikects Nuevos</div>
+				      <div class="collapsible-header"><i class="material-icons">email</i>Tikects Nuevos<span class="new badge">4</span></div>
 				      <div class="collapsible-body white">
-                          <ul class="collection">
-                            
-                            <li class="collection-item">Alvin</li>
-                            <li class="collection-item">Alvin</li>
-                            <li class="collection-item">Alvin</li>
-                            <li class="collection-item">Alvin</li>
+                          <ul class="">
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
                         </ul>
                           
                           </div>
@@ -23,7 +23,15 @@
 				<ul class="collapsible">
 				    <li>
 				      <div class="collapsible-header"><i class="material-icons">email</i>Asignados</div>
-				      <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+				      <div class="collapsible-body white">
+                          <ul class="">
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                        </ul>
+                      </div>
 				    </li>
   				</ul>
 			</div>
@@ -32,7 +40,15 @@
 				<ul class="collapsible">
 				    <li>
 				      <div class="collapsible-header"><i class="material-icons">email</i>Cerrados</div>
-				      <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+				      <div class="collapsible-body white">
+                          <ul class="">
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                        </ul>
+                      </div>
 				    </li>
   				</ul>
 			</div>
@@ -41,7 +57,15 @@
 				<ul class="collapsible">
 				    <li>
 				      <div class="collapsible-header"><i class="material-icons">email</i>Por Cerrar</div>
-				      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+				      <div class="collapsible-body">
+                          <ul class="">
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
+                        </ul>
+                      </div>
 				    </li>
   				</ul>
 			</div>

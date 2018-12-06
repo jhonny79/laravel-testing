@@ -24155,6 +24155,30 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -24190,25 +24214,75 @@ var staticRenderFns = [
             _c("li", [
               _c("div", { staticClass: "collapsible-header" }, [
                 _c("i", { staticClass: "material-icons" }, [_vm._v("email")]),
-                _vm._v("Tikects Nuevos")
+                _vm._v("Tikects Nuevos"),
+                _c("span", { staticClass: "new badge" }, [_vm._v("4")])
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "collapsible-body white" }, [
-                _c("ul", { staticClass: "collection" }, [
-                  _c("li", { staticClass: "collection-item" }, [
-                    _vm._v("Alvin")
+                _c("ul", {}, [
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
                   ]),
                   _vm._v(" "),
-                  _c("li", { staticClass: "collection-item" }, [
-                    _vm._v("Alvin")
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
                   ]),
                   _vm._v(" "),
-                  _c("li", { staticClass: "collection-item" }, [
-                    _vm._v("Alvin")
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
                   ]),
                   _vm._v(" "),
-                  _c("li", { staticClass: "collection-item" }, [
-                    _vm._v("Alvin")
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
                   ])
                 ])
               ])
@@ -24225,7 +24299,72 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "collapsible-body white" }, [
-                _c("span", [_vm._v("Lorem ipsum dolor sit amet.")])
+                _c("ul", {}, [
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
+                  ])
+                ])
               ])
             ])
           ])
@@ -24240,7 +24379,72 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "collapsible-body white" }, [
-                _c("span", [_vm._v("Lorem ipsum dolor sit amet.")])
+                _c("ul", {}, [
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
+                  ])
+                ])
               ])
             ])
           ])
@@ -24255,7 +24459,72 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "collapsible-body" }, [
-                _c("span", [_vm._v("Lorem ipsum dolor sit amet.")])
+                _c("ul", {}, [
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "collection-item " }, [
+                    _c("div", { staticClass: "card-panel" }, [
+                      _c("p", [_vm._v("de: jbapti01@cantv.com.ve")]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "title" }, [_vm._v("asunto:")]),
+                      _c("p", [
+                        _vm._v(
+                          " hola como estan miren necesito un ayuda con estas ips"
+                        )
+                      ])
+                    ])
+                  ])
+                ])
               ])
             ])
           ])
