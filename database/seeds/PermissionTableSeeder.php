@@ -14,12 +14,12 @@ class PermissionTableSeeder extends Seeder
     {   
 
         //Permisos de Usuarios
-        Permission::create([
+        // Permission::create([
 
-            'name' => 'navegar usuarios',
-            'slug' => 'users.index',
-            'description' => 'navegar usuarios',
-        ]);
+        //     'name' => 'navegar usuarios',
+        //     'slug' => 'users.index',
+        //     'description' => 'navegar usuarios',
+        // ]);
 
         // Permission::create([
 

@@ -1,86 +1,62 @@
 <template>
     <div class="row">
-		<div class="col s12 m12 l12">
-			<div class="col s12 m12 l3">
-				<ul class="collapsible ">
-				    <li>
-				      <div class="collapsible-header"><i class="material-icons">email</i>Tikects Nuevos<span class="new badge">4</span></div>
-				      <div class="collapsible-body white">
-                          <ul class="">
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                        </ul>
-                          
-                          </div>
-				    </li>
-  				</ul>
-			</div>
+		<!-- <admin ></admin> -->
+        <template v-if="usuario.cargo === 'coordinador'">
+            <admin></admin>
+        </template>
+        <template v-if="usuario.cargo === 'especialista'">
+            hola especialista
+        </template>
 
-			<div class="col s12 m12 l3">
-				<ul class="collapsible">
-				    <li>
-				      <div class="collapsible-header"><i class="material-icons">email</i>Asignados</div>
-				      <div class="collapsible-body white">
-                          <ul class="">
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                        </ul>
-                      </div>
-				    </li>
-  				</ul>
-			</div>
-
-			<div class="col s12 m12 l3">
-				<ul class="collapsible">
-				    <li>
-				      <div class="collapsible-header"><i class="material-icons">email</i>Cerrados</div>
-				      <div class="collapsible-body white">
-                          <ul class="">
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                        </ul>
-                      </div>
-				    </li>
-  				</ul>
-			</div>
-
-			<div class="col s12 m12 l3">
-				<ul class="collapsible">
-				    <li>
-				      <div class="collapsible-header"><i class="material-icons">email</i>Por Cerrar</div>
-				      <div class="collapsible-body">
-                          <ul class="">
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                            <li class="collection-item "><div class="card-panel"> <p>de: jbapti01@cantv.com.ve</p>   <span class="title">asunto:</span><p> hola como estan miren necesito un ayuda con estas ips</p></div></li>
-                        </ul>
-                      </div>
-				    </li>
-  				</ul>
-			</div>
-		</div>
 	</div>
 </template>
 
 <script>
+
+import {enlace} from './EventBus.js'
+import Admin from '../components/Admin.vue'
+import User from '../components/User.vue'
+import axios from 'axios'
+import toastr from 'toastr'
+
+
+
     export default {
+        created: function () {
+            this.getUser()
+            this.emitirUsuario()
+            console.log('se ejecuta el created de panel')
+          
+        },
+        components:{
+            Admin,
+            User
+        },
         data (){
             return {
-                usuario: {},
-                tareas: [
-                    { id: '1', asunto: 'hola jose' , de: 'departamento X', para: 'jose'},
+                usuario: { },
+                tickets: [
+                   
                 ]
+            }
+        },
+        methods: {
+            getUser: function (){
+                var url = 'user'
+
+                //obtener usuario logueado
+                axios.get(url).then(response => {
+                    
+                    this.usuario = response.data
+                    console.log(this.usuario)
+                }).catch( (error) => {
+                     toastr.error('exploto')
+                    console.log(error)
+                })
+            },
+            emitirUsuario: function (){
+                enlace.$emit('panel:change')
+                console.log('hola admin')
             }
         },
         mounted() {

@@ -88,48 +88,50 @@ class TicketController extends Controller
         //
     }
 
+    public function autoGuardado (){
+        
+    }
+
+    // public function test(){
 
 
-    public function test(){
+    //     $oClient = new Client([
+    //         'host'          => 'smtpcorp.cantv.com.ve',
+    //         'port'          => 110,
+    //         'encryption'    => 'false',
+    //         'validate_cert' => true,
+    //         'username'      => 'iforense@cantv.com.ve',
+    //         'password'      => 'A1s2d3f4',
+    //         'protocol'      => 'pop3'
+    //     ]);
+    //     /* 
+    //     //Get all Mailboxes
+    //     /** @var \Webklex\IMAP\Support\FolderCollection $aFolder */
+    //     $aFolder = $oClient->getFolders();
 
+    //     //dd($aFolder);
 
-        $oClient = new Client([
-            'host'          => 'smtpcorp.cantv.com.ve',
-            'port'          => 110,
-            'encryption'    => 'false',
-            'validate_cert' => true,
-            'username'      => 'iforense@cantv.com.ve',
-            'password'      => 'A1s2d3f4',
-            'protocol'      => 'pop3'
-        ]);
-        /* 
-        //Get all Mailboxes
-        /** @var \Webklex\IMAP\Support\FolderCollection $aFolder */
-        $aFolder = $oClient->getFolders();
-
-        //dd($aFolder);
-
-        // Mail::to(Auth::user())->send(new testingEmail());
-        $oFolder = $oClient->getFolder('INBOX.name');
+    //     // Mail::to(Auth::user())->send(new testingEmail());
+    //     $oFolder = $oClient->getFolder('INBOX.name');
       
 
         
 
-        //dd($oFolder);
-        set_time_limit(5000);
-        //$aMessage = $oFolder->query()->since('26.10.2018')->get();
-         $aMessage = $oFolder->query()->new()->get();
-         //$aMessage = $oFolder->query()->all()->get();
-         //$aMessage = $oFolder->query()->since(now()->subDays(5))->leaveUnread()->get();
-         //$aMessage = $oFolder->query()->new()->leaveUnread()->get();
-        dd($aMessage);
+    //     //dd($oFolder);
+    //     set_time_limit(5000);
+    //     //$aMessage = $oFolder->query()->since('26.10.2018')->get();
+    //      $aMessage = $oFolder->query()->new()->get();
+    //      //$aMessage = $oFolder->query()->all()->get();
+    //      //$aMessage = $oFolder->query()->since(now()->subDays(5))->leaveUnread()->get();
+    //      //$aMessage = $oFolder->query()->new()->leaveUnread()->get();
+    //     dd($aMessage);
 
-        return view('contacto', compact('aMessage'));
+    //     return view('contacto', compact('aMessage'));
         
-    }
+    // }
 
 
-    public function test2(){
-        Mail::to('jbapti01@cantv.com.ve')->cc('i-forense@seguridad.cantv.com.ve')->send(new testingEmail());
-    }
+    // public function test2(){
+    //     Mail::to('jbapti01@cantv.com.ve')->cc('i-forense@seguridad.cantv.com.ve')->send(new testingEmail());
+    // }
 }
