@@ -20,6 +20,7 @@ Auth::routes();
 
 Route::get('/', 'dashBoardController@inicio')->name('inicio');
 Route::get('/user', 'dashBoardController@user')->name('user');
+Route::get('/solicitudes', 'dashBoardController@solicitudes')->name('solicitudes');
 
 
 Route::get('/tikect', 'HomeController@index')->name('home');
