@@ -62,7 +62,7 @@ class dashBoardController extends Controller
             
         }
         
-        $solicitudes = Solicitud::all();
+        $solicitudes = Solicitud::orderBy('id', 'DESC')->get();
         return response()->Json($solicitudes);
     }
 }

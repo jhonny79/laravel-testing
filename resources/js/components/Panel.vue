@@ -2,7 +2,7 @@
     <div class="row">
 		<!-- <admin ></admin> -->
         <template v-if="usuario.cargo === 'coordinador'">
-            <admin></admin>
+            <admin :user="usuario"></admin>
         </template>
         <template v-if="usuario.cargo === 'especialista'">
             hola especialista
@@ -13,7 +13,7 @@
 
 <script>
 
-import {enlace} from './EventBus.js'
+
 import Admin from '../components/Admin.vue'
 import User from '../components/User.vue'
 import axios from 'axios'
@@ -24,7 +24,7 @@ import toastr from 'toastr'
     export default {
         created: function () {
             this.getUser()
-            this.emitirUsuario()
+            
             console.log('se ejecuta el created de panel')
           
         },
@@ -34,7 +34,7 @@ import toastr from 'toastr'
         },
         data (){
             return {
-                usuario: { },
+                usuario: {},
                 tickets: [
                    
                 ]
@@ -54,10 +54,6 @@ import toastr from 'toastr'
                     console.log(error)
                 })
             },
-            emitirUsuario: function (){
-                enlace.$emit('panel:change')
-                console.log('hola admin')
-            }
         },
         mounted() {
             console.log('Component mounted.')

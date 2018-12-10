@@ -9076,3 +9076,24 @@ white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis; 
 }
+
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: #fafafa;
+    padding: 0;
+    max-height: 100%;
+    width: 91%;
+    margin: auto;
+    overflow-y: auto;
+    border-radius: 2px;
+    will-change: top, opacity;
+}
+
+.modal.modal-fixed-footer {
+    padding: 0;
+    height: 85%;
+}
