@@ -64,6 +64,7 @@
 /******/ })
 /************************************************************************/
 /******/ ([
+<<<<<<< HEAD
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -374,6 +375,9 @@ module.exports = {
 
 
 /***/ }),
+=======
+/* 0 */,
+>>>>>>> modular
 /* 1 */
 /***/ (function(module, exports) {
 
@@ -401,7 +405,216 @@ module.exports = g;
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 2 */
+=======
+/* 2 */,
+/* 3 */
+/***/ (function(module, exports) {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+
+/***/ }),
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(10);
+__webpack_require__(11);
+module.exports = __webpack_require__(12);
+
+
+/***/ }),
+/* 10 */
+>>>>>>> modular
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15126,6 +15339,7 @@ function assertProp (
   }
 }
 
+<<<<<<< HEAD
 var simpleCheckRE = /^(String|Number|Boolean|Function|Symbol)$/;
 
 function assertType (value, type) {
@@ -15150,6 +15364,15 @@ function assertType (value, type) {
     expectedType: expectedType
   }
 }
+=======
+  Range.init($('input[type=range]'));
+})(cash, M.anime);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+>>>>>>> modular
 
 /**
  * Use function string name to check built-in types,
@@ -15179,6 +15402,7 @@ function getTypeIndex (type, expectedTypes) {
 
 /*  */
 
+<<<<<<< HEAD
 function handleError (err, vm, info) {
   if (vm) {
     var cur = vm;
@@ -15209,6 +15433,18 @@ function globalHandleError (err, vm, info) {
   }
   logError(err, vm, info);
 }
+=======
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Panel_vue__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Panel_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_Panel_vue__);
+>>>>>>> modular
 
 function logError (err, vm, info) {
   if (true) {
@@ -15276,6 +15512,7 @@ if (typeof setImmediate !== 'undefined' && isNative(setImmediate)) {
   };
 }
 
+<<<<<<< HEAD
 // Determine microtask defer implementation.
 /* istanbul ignore next, $flow-disable-line */
 if (typeof Promise !== 'undefined' && isNative(Promise)) {
@@ -15293,6 +15530,11 @@ if (typeof Promise !== 'undefined' && isNative(Promise)) {
   // fallback to macro
   microTimerFunc = macroTimerFunc;
 }
+=======
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> modular
 
 /**
  * Wrap a function so that if any code inside triggers state change,
@@ -30876,10 +31118,18 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 			continue;
 		}
 
+<<<<<<< HEAD
 		contains = jQuery.contains( elem.ownerDocument, elem );
 
 		// Append to fragment
 		tmp = getAll( fragment.appendChild( elem ), "script" );
+=======
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(14).setImmediate))
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> modular
 
 		// Preserve script evaluation history
 		if ( contains ) {
@@ -32850,6 +33100,7 @@ Tween.propHooks.scrollTop = Tween.propHooks.scrollLeft = {
 	}
 };
 
+<<<<<<< HEAD
 jQuery.easing = {
 	linear: function( p ) {
 		return p;
@@ -33514,6 +33765,25 @@ jQuery.fx.tick = function() {
 	}
 	fxNow = undefined;
 };
+=======
+// setimmediate attaches itself to the global object
+__webpack_require__(15);
+// On some exotic environments, it's not clear which object `setimmediate` was
+// able to install onto.  Search each possibility in the same order as the
+// `setimmediate` library.
+exports.setImmediate = (typeof self !== "undefined" && self.setImmediate) ||
+                       (typeof global !== "undefined" && global.setImmediate) ||
+                       (this && this.setImmediate);
+exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
+                         (typeof global !== "undefined" && global.clearImmediate) ||
+                         (this && this.clearImmediate);
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> modular
 
 jQuery.fx.timer = function( timer ) {
 	jQuery.timers.push( timer );
@@ -34517,6 +34787,7 @@ function buildParams( prefix, obj, traditional, add ) {
 
 	} else {
 
+<<<<<<< HEAD
 		// Serialize scalar item.
 		add( prefix, obj );
 	}
@@ -36010,6 +36281,75 @@ jQuery.expr.pseudos.animated = function( elem ) {
 
 
 
+=======
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(3)))
+
+/***/ }),
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(39)
+/* script */
+var __vue_script__ = __webpack_require__(40)
+/* template */
+var __vue_template__ = __webpack_require__(41)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/Panel.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-79f9e0a9", Component.options)
+  } else {
+    hotAPI.reload("data-v-79f9e0a9", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+>>>>>>> modular
 
 jQuery.offset = {
 	setOffset: function( elem, options, i ) {
@@ -36023,11 +36363,17 @@ jQuery.offset = {
 			elem.style.position = "relative";
 		}
 
+<<<<<<< HEAD
 		curOffset = curElem.offset();
 		curCSSTop = jQuery.css( elem, "top" );
 		curCSSLeft = jQuery.css( elem, "left" );
 		calculatePosition = ( position === "absolute" || position === "fixed" ) &&
 			( curCSSTop + curCSSLeft ).indexOf( "auto" ) > -1;
+=======
+/***/ }),
+/* 39 */
+/***/ (function(module, exports) {
+>>>>>>> modular
 
 		// Need to be able to calculate position if either
 		// top or left is auto and position is either absolute or fixed
@@ -36400,12 +36746,24 @@ if ( true ) {
 }
 
 
+<<<<<<< HEAD
+=======
+/***/ }),
+/* 40 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+>>>>>>> modular
 
 
 var
 
+<<<<<<< HEAD
 	// Map over jQuery in case of overwrite
 	_jQuery = window.jQuery,
+=======
+/***/ }),
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> modular
 
 	// Map over the $ in case of overwrite
 	_$ = window.$;
