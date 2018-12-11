@@ -65,4 +65,15 @@ class dashBoardController extends Controller
         $solicitudes = Solicitud::orderBy('id', 'DESC')->get();
         return response()->Json($solicitudes);
     }
+
+
+    public function asignados (){
+
+        $asignados = Caso::all();
+
+        return response()->Json($asignados);
+    }
+
+
+
 }

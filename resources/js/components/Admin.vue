@@ -140,7 +140,9 @@ var modal = function (){
 }
 
 export default {
+    
     components: {Detail, Asignar},
+
     created: function (){
         tooltip()
         this.obtenerCasosAsignados()
@@ -149,26 +151,31 @@ export default {
 
          
     },
+
     updated: function (){
         modal()
         tooltip()
         console.log('se ejecuta el beforeUpdate de admin')
     },
+
     mounted: function() {
         
         collapsible()
         tooltip()
              console.log('se ejecuta el mounted')
         },
+
         props: {
         user: {type: Object}
         },
+
         data () {
             return {
                 solicitudes: {},
                 asignados: {}
             }
         },
+
         methods: {
             obtenerSolicitudes: function (){
 

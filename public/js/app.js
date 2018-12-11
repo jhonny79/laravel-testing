@@ -25551,33 +25551,40 @@ var modal = function modal() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+
     components: { Detail: __WEBPACK_IMPORTED_MODULE_3__components_Detail_vue___default.a, Asignar: __WEBPACK_IMPORTED_MODULE_4__components_Asignar_vue___default.a },
+
     created: function created() {
         tooltip();
         this.obtenerCasosAsignados();
         this.obtenerSolicitudes();
         console.log('se ejecuta el created de admin');
     },
+
     updated: function updated() {
         modal();
         tooltip();
         console.log('se ejecuta el beforeUpdate de admin');
     },
+
     mounted: function mounted() {
 
         collapsible();
         tooltip();
         console.log('se ejecuta el mounted');
     },
+
     props: {
         user: { type: Object }
     },
+
     data: function data() {
         return {
             solicitudes: {},
             asignados: {}
         };
     },
+
 
     methods: {
         obtenerSolicitudes: function obtenerSolicitudes() {
@@ -37106,6 +37113,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -37124,6 +37151,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             solicitud: {}
         };
+    },
+
+    methods: {
+        generarAsignacion: function generarAsignacion() {
+            consolelog('generando');
+        }
     }
 });
 
@@ -37140,9 +37173,23 @@ var render = function() {
     { staticClass: "modal modal-fixed-footer", attrs: { id: "asignar" } },
     [
       _c("div", { staticClass: "modal-content" }, [
+        _c(
+          "form",
+          {
+            attrs: { action: "POST" },
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.nuevaEntrada($event)
+              }
+            }
+          },
+          [_vm._m(0)]
+        ),
+        _vm._v(" "),
         _c("ul", { staticClass: "collapsible" }, [
           _c("li", [
-            _vm._m(0),
+            _vm._m(1),
             _vm._v(" "),
             _c("div", { staticClass: "collapsible-body" }, [
               _c("h4", [_vm._v("Asunto : " + _vm._s(_vm.solicitud.asunto))]),
@@ -37157,11 +37204,60 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _vm._m(1)
+      _vm._m(2)
     ]
   )
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-content" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "input-field col s12 m12 l6 offset-l3" }, [
+          _c("input", {
+            staticClass: "validate",
+            attrs: { type: "text", id: "placa" }
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "placa" } }, [
+            _vm._v("Placa del Vehículo")
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row center" }, [
+        _c("div", { staticClass: "input-field col s12 m12 l6 offset-l3" }, [
+          _c("input", {
+            staticClass: "validate",
+            attrs: { type: "text", id: "marca" }
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "marca" } }, [
+            _vm._v("Marca del Vehículo")
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c(
+          "button",
+          {
+            staticClass:
+              "modal-close col s12 m12 l6 offset-l3 btn btn-large waves-effect waves-light indigo accent-4",
+            attrs: { type: "submit", name: "btn_login" }
+          },
+          [
+            _vm._v("\n                                  Asignar "),
+            _c("i", { staticClass: "material-icons prefix right" }, [
+              _vm._v("chevron_right")
+            ])
+          ]
+        )
+      ])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
