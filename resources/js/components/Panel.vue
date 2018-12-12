@@ -24,8 +24,14 @@ import toastr from 'toastr'
     export default {
         created: function () {
             this.getUser()
+            this.generarSolicitudes()
             
             console.log('se ejecuta el created de panel')
+
+            setInterval(() =>{
+            this.generarSolicitudes()
+            
+            },1000000);
           
         },
         components:{
@@ -54,9 +60,27 @@ import toastr from 'toastr'
                     console.log(error)
                 })
             },
+            generarSolicitudes: function (){
+                var url = '/generador'
+
+                //obtener usuario logueado
+                axios.get(url).then(response => {
+                    
+                    
+                    console.log('el generador esta funcionando correctamente')
+                }).catch( (error) => {
+                     
+                    console.log(error)
+                })
+            },
         },
+        updated: function (){
+        
+        this.generarSolicitudes()
+    },
         mounted() {
             console.log('Component mounted.')
+            this.generarSolicitudes()
         }
     }
 </script>

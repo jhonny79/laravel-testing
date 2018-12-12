@@ -33,6 +33,22 @@ class dashBoardController extends Controller
 
     public function solicitudes (){
         
+        
+        
+        $solicitudes = Solicitud::orderBy('id', 'DESC')->get();
+        return response()->Json($solicitudes);
+    }
+
+
+    public function asignados (){
+
+        $asignados = Caso::all();
+
+        return response()->Json($asignados);
+    }
+
+    public function generador (){
+
         $oClient = Client::account('default');
         $oClient->connect();
         $aFolder = $oClient->getFolders();
@@ -61,19 +77,7 @@ class dashBoardController extends Controller
             }
             
         }
-        
-        $solicitudes = Solicitud::orderBy('id', 'DESC')->get();
-        return response()->Json($solicitudes);
+        return $existe;
     }
-
-
-    public function asignados (){
-
-        $asignados = Caso::all();
-
-        return response()->Json($asignados);
-    }
-
-
 
 }

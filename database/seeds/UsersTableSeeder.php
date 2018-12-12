@@ -19,6 +19,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'jbapti01@cantv.com.ve',
             'password' => bcrypt('qwerty'),
             'cargo' => 'especialista',
+            'coordinacion' => 'ciif',
         ]);
 
         User::create([
@@ -27,6 +28,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'jminon01@cantv.com.ve',
             'password' => bcrypt('qwerty'),
             'cargo' => 'especialista',
+            'coordinacion' => 'ciif',
         ]);
 
         User::create([
@@ -35,6 +37,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'jmolin@cantv.com.ve',
             'password' => bcrypt('qwerty'),
             'cargo' => 'coordinador',
+            'coordinacion' => 'ciif',
         ]);
     }
 }

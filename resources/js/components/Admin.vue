@@ -45,7 +45,7 @@
 				     <li>
 				      <div class="collapsible-header" ><i class="material-icons">email</i>Casos Asignados</div>
 				        <div class="collapsible-body white" v-if="asignados != 0">
-                            <article class="card-panel hoverable" v-for="asignado in asignados" >
+                            <article class="card-panel hoverable" v-for="asignado  in asignados" >
                                 
                                 <p class=" grey-text text-darken-2">
                                     <strong>de:</strong><br> {{ asignado.de }}
@@ -139,6 +139,12 @@ var modal = function (){
     var instances = M.Modal.init(elems);
 }
 
+
+var selects = function (){
+     var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+}
+
 export default {
     
     components: {Detail, Asignar},
@@ -149,20 +155,24 @@ export default {
         this.obtenerSolicitudes()
          console.log('se ejecuta el created de admin')
 
-         
+         setInterval(() =>{
+            this.obtenerSolicitudes()
+            this.obtenerCasosAsignados()
+            },1000000);
     },
 
     updated: function (){
         modal()
         tooltip()
-        console.log('se ejecuta el beforeUpdate de admin')
+        selects()
+        console.log('se ejecuta el beforUpdate de admin')
     },
 
     mounted: function() {
         
         collapsible()
         tooltip()
-             console.log('se ejecuta el mounted')
+             console.log('se ejecta el monted')
         },
 
         props: {
@@ -186,7 +196,7 @@ export default {
                     console.log(this.solicitudes)
                      tooltip()
                 }).catch( (error) => {
-                 toastr.error('exploto')
+                 toastr.error('boom')
                 console.log(error)
             })
 
@@ -201,7 +211,7 @@ export default {
                      
                 }).catch( (error) => {
                     this.asignados = 0
-                 toastr.error('No tiene casos pendientes')
+                 
                 console.log(error)
             })
             },

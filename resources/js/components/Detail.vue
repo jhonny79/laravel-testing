@@ -1,7 +1,7 @@
 <template>
     <div id="detail" class="modal modal-fixed-footer">
     <div class="modal-content">
-      <h4>Asunto : {{ solicitud.asunto }}</h4>
+     <h4>Asunto : <p>{{ solicitud.asunto }}</p></h4>  
       <h6>De : {{ solicitud.de }}</h6>
       <h6>Fecha : {{ solicitud.created_at }}</h6>
       <p>{{ solicitud.cuerpo }}</p>
